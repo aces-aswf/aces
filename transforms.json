@@ -173,7 +173,7 @@
           "userName": "Unity Transform",
           "transformType": "CSC",
           "equivalentTransformIds": [],
-          "inverseTransformId": "",
+          "inverseTransformId": "urn:ampas:aces:transformId:v2.0:CSC.Academy.Unity.a2.v1",
           "transformUrl": "https://raw.githubusercontent.com/ampas/aces-input-and-colorspaces/cc60becf11534f2a40df00a281f47e95412d0599/unity/CSC.Academy.Unity.ctl"
         },
         {
@@ -1968,7 +1968,7 @@
             "ACESutil.Unity.a1.0.3",
             "ACESlib.Unity.a1.0.1"
           ],
-          "inverseTransformId": "",
+          "inverseTransformId": "urn:ampas:aces:transformId:v1.5:ACESutil.Unity.a1.0.3",
           "transformUrl": "https://raw.githubusercontent.com/ampas/aces-core/refs/tags/v1.3.1/transforms/ctl/utilities/ACESutil.Unity.ctl"
         },
         {
@@ -3405,7 +3405,7 @@
             "ACESutil.Unity.a1.0.3",
             "ACESlib.Unity.a1.0.1"
           ],
-          "inverseTransformId": "",
+          "inverseTransformId": "urn:ampas:aces:transformId:v1.5:ACESutil.Unity.a1.0.3",
           "transformUrl": "https://raw.githubusercontent.com/ampas/aces-core/refs/tags/v1.3/transforms/ctl/utilities/ACESutil.Unity.ctl"
         },
         {
@@ -4650,7 +4650,7 @@
             "ACESutil.Unity.a1.0.3",
             "ACESlib.Unity.a1.0.1"
           ],
-          "inverseTransformId": "",
+          "inverseTransformId": "urn:ampas:aces:transformId:v1.5:ACESutil.Unity.a1.0.3",
           "transformUrl": "https://raw.githubusercontent.com/ampas/aces-core/refs/tags/v1.2/transforms/ctl/utilities/ACESutil.Unity.ctl"
         },
         {
@@ -5724,7 +5724,7 @@
           "equivalentTransformIds": [
             "ACESlib.Unity.a1.0.1"
           ],
-          "inverseTransformId": "",
+          "inverseTransformId": "ACESutil.Unity.a1.0.3",
           "transformUrl": "https://raw.githubusercontent.com/ampas/aces-core/refs/tags/v1.1/transforms/ctl/utilities/ACESutil.Unity.ctl"
         },
         {
@@ -6590,7 +6590,7 @@
           "equivalentTransformIds": [
             "ACESlib.Unity.a1.0.1"
           ],
-          "inverseTransformId": "",
+          "inverseTransformId": "ACESutil.Unity.a1.0.3",
           "transformUrl": "https://raw.githubusercontent.com/ampas/aces-core/refs/tags/v1.0.3/transforms/ctl/utilities/ACESutil.Unity.ctl"
         },
         {
@@ -7306,7 +7306,7 @@
           "userName": "",
           "transformType": "ACESlib",
           "equivalentTransformIds": [],
-          "inverseTransformId": "",
+          "inverseTransformId": "ACESlib.Unity.a1.0.1",
           "transformUrl": "https://raw.githubusercontent.com/ampas/aces-core/refs/tags/v1.0.2/transforms/ctl/utilities/ACESlib.Unity.a1.0.1.ctl"
         },
         {
@@ -7974,7 +7974,7 @@
           "userName": "",
           "transformType": "ACESlib",
           "equivalentTransformIds": [],
-          "inverseTransformId": "",
+          "inverseTransformId": "ACESlib.Unity.a1.0.1",
           "transformUrl": "https://raw.githubusercontent.com/ampas/aces-core/refs/tags/v1.0.1/transforms/ctl/utilities/ACESlib.Unity.a1.0.1.ctl"
         },
         {
@@ -8575,7 +8575,7 @@
           "userName": "",
           "transformType": "ACESlib",
           "equivalentTransformIds": [],
-          "inverseTransformId": "",
+          "inverseTransformId": "ACESlib.Unity.a1.0.0",
           "transformUrl": "https://raw.githubusercontent.com/ampas/aces-core/refs/tags/v1.0/transforms/ctl/utilities/ACESlib.Unity.a1.0.0.ctl"
         },
         {
