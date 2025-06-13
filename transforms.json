@@ -8,7 +8,6 @@
         "patchVersion": 0,
         "packageDate": "2025.04.04"
       },
-      "creationDateTime": "2025-06-10T00:00:23.007150Z",
       "transforms": [
         {
           "transformId": "urn:ampas:aces:transformId:v2.0:CSC.Academy.ACES_to_ACEScc.a2.v1",
@@ -1434,7 +1433,6 @@
         "patchVersion": 1,
         "packageDate": ""
       },
-      "creationDateTime": "2025-06-10T00:00:23.071101Z",
       "transforms": [
         {
           "transformId": "urn:ampas:aces:transformId:v1.5:ACEScsc.Academy.ACES_to_ACEScc.a1.0.3",
@@ -2887,7 +2885,6 @@
         "patchVersion": 0,
         "packageDate": ""
       },
-      "creationDateTime": "2025-06-10T00:00:23.124696Z",
       "transforms": [
         {
           "transformId": "urn:ampas:aces:transformId:v1.5:ACEScsc.Academy.ACES_to_ACEScc.a1.0.3",
@@ -4194,7 +4191,6 @@
         "patchVersion": 0,
         "packageDate": ""
       },
-      "creationDateTime": "2025-06-10T00:00:23.173856Z",
       "transforms": [
         {
           "transformId": "ACEScsc.ACES_to_CLog2_CGamut.a1.v1",
@@ -5426,7 +5422,6 @@
         "patchVersion": 0,
         "packageDate": ""
       },
-      "creationDateTime": "2025-06-10T00:00:23.217725Z",
       "transforms": [
         {
           "transformId": "ACEScsc.ACES_to_ACEScc.a1.0.3",
@@ -6324,7 +6319,6 @@
         "patchVersion": 3,
         "packageDate": ""
       },
-      "creationDateTime": "2025-06-10T00:00:23.260590Z",
       "transforms": [
         {
           "transformId": "ACEScsc.ACES_to_ACEScc.a1.0.3",
@@ -7105,7 +7099,6 @@
         "patchVersion": 2,
         "packageDate": ""
       },
-      "creationDateTime": "2025-06-10T00:00:23.300544Z",
       "transforms": [
         {
           "transformId": "ACEScsc.ACES_to_ACEScc.a1.0.1",
@@ -7777,7 +7770,6 @@
         "patchVersion": 1,
         "packageDate": ""
       },
-      "creationDateTime": "2025-06-10T00:00:23.344328Z",
       "transforms": [
         {
           "transformId": "ACEScsc.ACES_to_ACEScc.a1.0.1",
@@ -8432,7 +8424,6 @@
         "patchVersion": 0,
         "packageDate": ""
       },
-      "creationDateTime": "2025-06-10T00:00:23.385656Z",
       "transforms": [
         {
           "transformId": "ACEScsc.ACES_to_ACEScc.a1.0.0",
