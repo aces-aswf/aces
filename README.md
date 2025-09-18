@@ -1,41 +1,107 @@
-# Academy Color Encoding System #
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- Copyright Contributors to the ACES Project -->
 
-This repository contains submodules to the component repositories of the Academy Color Encoding System (ACES). It serves as a convenient way to manage and reference various versions of ACES.
+![Academy Color Encoding
+System](https://github.com/AcademySoftwareFoundation/artwork/blob/main/projects/aces/horizontal/color/aces-horizontal-color.png)
 
-### Versioning
+# Academy Color Encoding System
 
-ACES uses [semantic versioning](https://semver.org/). The version number of ACES reflects changes to the [ACES core algorithms](https://github.com/ampas/aces-dev). Additionally, this repository includes a build number that denotes the specific collection of modular components (e.g., [Input and Color Space Transforms](https://github.com/ampas/aces-input-and-colorspaces), [Output Transforms](https://github.com/ampas/aces-output), etc.).
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-#### Semantic Versioning Structure
+The Academy Color Encoding System (ACES) is a framework for interchanging
+digital image files, managing color workflows and creating masters for delivery
+and archiving. ACES is designed to unify color management across the entire
+imaging chain, including capture, postproduction, distribution, and preservation, so that
+images look consistent and creative intent is maintained.
+
+This repository provides a structured and organized way to track and manage
+different versions of ACES, along with their associated modular components,
+which are separated into subrepositories:
+
+- **aces-core:** 
+  - contains the maths and algorithms that are at the core of the ACES rendering
+  transforms 
+- **aces-amf:** 
+  - holds the XSD schema and example files for ACES Metadata File (AMF)
+- **aces-input-and-colorspaces:** 
+  - contains color space definitions and the conversions between them, i.e.
+  to/from ACES2065-1
+- **aces-output:** 
+  - transforms with parameters preset to correspond with characteristics of
+  standard or common display configurations
+- **aces-look:** 
+  - contains any transforms that serve to modify the default appearance of
+  images through an ACES pipeline
+
+## ACES Project Mission
+
+The Academy Color Encoding System (ACES) aims to provide a standardized, device-independent, and future-proof system for managing color throughout the motion picture and television production pipeline.
+
+ACES aims to:
+
+- provide a common color interchange format (ACES2065-1) to facilitate image interchange and archival
+- enable consistent color reproduction from image capture through editing, VFX, grading, mastering, and archiving, regardless of camera, display, or workflow
+- preserve creative intent across different display devices and between software and hardware from different vendors
+- support long-term archiving of motion picture assets in a format that can be faithfully re-rendered on future display technologies
+- recieve wide industry adoption
+- foster a healthy and active community
+
+## Tags and Releases
+
+ACES uses [semantic versioning](https://semver.org/). The version number of ACES
+reflects changes to the ACES core algorithms. 
 
 - **MAJOR.MINOR.PATCH**: Reflects changes to the core ACES algorithms.
-- **Build Number**: Identifies the specific collection of modular components provided by the ACES team, as well as other contributions from the community.
+
+A build number denotes the specific collection of modular components (e.g.,
+[Input and Color Space
+Transforms](https://github.com/ampas/aces-input-and-colorspaces), [Output
+Transforms](https://github.com/ampas/aces-output), etc.) in date format.
+
+- **Build Number**: Identifies the specific collection of modular components
+  from the submodules - formatted as `+YYYY.MM.DD`
 
 ### Modular Components
 
-The modular components of ACES can be updated at any time by the ACES team or by end users. These components do not affect the core functionality of ACES, which is why they are not included in the MAJOR.MINOR.PATCH version number.
+The modular components of ACES can be updated at any time by the ACES team or by
+end users. These components do not affect the core functionality of ACES, which
+is why they are not included in the MAJOR.MINOR.PATCH version number.
 
-### Contributions and Customization
+### ACES History
+This repository only contains history for ACES 2.0 and newer. The git history for earlier ACES versions is [preserved in `aces-dev`](https://github.com/ampas/aces-core/tags), which was relabeled the `aces-core` repository with the reorganization associated with ACES 2.  
 
-Developers and end users may generate their own modular components. When doing so, they should:
+## ACES Resources
 
-- Create an ACES `transformID` for their components.
-- Provide a mechanism for sharing these components with other users (e.g via a CLF referenced in an AMF file).
+- Website: <https://acescentral.com>
+  - Documentation: <https://docs.acescentral.com>
+  - Forum: <https://community.acescentral.com>
+- Slack workspace: <https://aswf.slack.com>
+  - New users can join via <http://slack.aswf.io>
 
-End users and developers are not required to share their modular components with the community, which allows for extensive customization while preserving the core integrity of the ACES system. For instance, a developer might create custom look transforms or color space conversion transforms for a specific project. While they may choose not to share these with the wider community, they should still create an ACES transformID and CLF files to facilitate sharing these transforms with other vendors involved in the same project.
+## Contributing
 
-Note: Sharing custom transforms may necessitate that the software used on the project supports reading CLF and AMF files and can correctly apply these custom transforms within the ACES pipeline.
+ACES depends on community participation. Developers, manufacturers, and end
+users are encouraged to contribute code, bug fixes, documentation, and other
+technical artifacts.
 
-### Summary
+All contributors must have a signed Contributor License Agreement (CLA) on file
+to ensure that the project can freely use your contributions. 
 
-This repository provides a structured and organized way to track and manage different versions of ACES, along with their associated modular components. The build number helps developers reference a specific set of components, while also allowing for the addition of custom components.
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for more details.
 
+## Governance
 
-## License ##
-This project is licensed under the terms of the [LICENSE](./LICENSE.md) agreement.
+ACES is a project hosted by the [ASWF](https://aswf.io). See
+[GOVERNANCE.md](GOVERNANCE.md) for details about how the project operates.
 
-## Contributing ##
-Thank you for your interest in contributing to our project. Before any contributions can be accepted, we require contributors to sign a Contributor License Agreement (CLA) to ensure that the project can freely use your contributions. You can find more details and instructions on how to sign the CLA in the [CONTRIBUTING.md](./CONTRIBUTING.md) file.
+## Reporting Issues
 
-## Support ## 
-For support, please visit [ACESCentral.com](https://acescentral.com)
+To report a problem, please open an issue. 
+
+- General issues should be filed in this repository's [issue tracker](https://github.com/ampas/aces/issues). 
+- Issues specific to a particular transform or component should be filed in the issue tracker of the corresponding submodule whenever possible.
+- For sensitive or security-related issues, do not use the public issue tracker. Instead, refer to [SECURITY.md](SECURITY.md) for details on the project's security policy.
+
+## License
+
+The ACES Project is licensed under the [Apache 2.0 license](./LICENSE).
