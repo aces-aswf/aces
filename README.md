@@ -8,11 +8,39 @@ System](https://github.com/AcademySoftwareFoundation/artwork/blob/main/projects/
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-The Academy Color Encoding System (ACES) is a framework for interchanging
-digital image files, managing color workflows and creating masters for delivery
-and archiving. ACES is designed to unify color management across the entire
-imaging chain, including capture, postproduction, distribution, and preservation, so that
-images look consistent and creative intent is maintained.
+## Introduction
+
+The Academy Color Encoding System (ACES) started as an initative led by the
+Academy of Motion Picture Arts and Sciences to establish a unified,
+device-independent system for managing color throughout motion picture
+production. It has found usage in motion pictures, television, animation, VFX,
+gaming, immersive media, and related fields. The project’s mission is to enable
+predictable, high-quality color reproduction across diverse workflows and
+technologies, preserving creative intent while supporting interoperability,
+archival needs, and future innovation.
+
+## ACES Project Mission
+
+The Academy Color Encoding System (ACES) aims to provide a standardized,
+device-independent, and future-proof system for managing color throughout a
+production pipeline.
+
+ACES aims to:
+
+- define and maintain open, standardized encodings and transforms for color
+  management
+- provide a robust framework to support production, post-production,
+  distribution, and archiving
+- ensure compatibility with emerging imaging technologies, including high
+  dynamic range and wide color gamut
+- enable consistent color reproduction from image capture through editing, VFX,
+  grading, mastering, and archiving, regardless of hardware or workflow
+- support long-term archiving of motion picture assets in a format that can be
+  faithfully re-rendered on future display technologies
+- promote wide industry adoption
+- foster a healthy and active community
+
+## ACES Components
 
 This repository provides a structured and organized way to track and manage
 different versions of ACES, along with their associated modular components,
@@ -32,19 +60,6 @@ which are separated into subrepositories:
 - **aces-look:** 
   - contains any transforms that serve to modify the default appearance of
   images through an ACES pipeline
-
-## ACES Project Mission
-
-The Academy Color Encoding System (ACES) aims to provide a standardized, device-independent, and future-proof system for managing color throughout the motion picture and television production pipeline.
-
-ACES aims to:
-
-- provide a common color interchange format (ACES2065-1) to facilitate image interchange and archival
-- enable consistent color reproduction from image capture through editing, VFX, grading, mastering, and archiving, regardless of camera, display, or workflow
-- preserve creative intent across different display devices and between software and hardware from different vendors
-- support long-term archiving of motion picture assets in a format that can be faithfully re-rendered on future display technologies
-- recieve wide industry adoption
-- foster a healthy and active community
 
 ## Tags and Releases
 
@@ -67,8 +82,11 @@ The modular components of ACES can be updated at any time by the ACES team or by
 end users. These components do not affect the core functionality of ACES, which
 is why they are not included in the MAJOR.MINOR.PATCH version number.
 
-### ACES History
-This repository only contains history for ACES 2.0 and newer. The git history for earlier ACES versions is [preserved in `aces-dev`](https://github.com/ampas/aces-core/tags), which was relabeled the `aces-core` repository with the reorganization associated with ACES 2.  
+> [!IMPORTANT]
+> This repository only contains history for ACES 2.0 and newer. The git history
+for earlier ACES versions is [preserved in
+`aces-dev`](https://github.com/ampas/aces-core/tags), which was relabeled as
+`aces-core` during a code reorganization associated with the release of ACES 2.  
 
 ## ACES Resources
 
@@ -91,16 +109,21 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for more details.
 
 ## Governance
 
-ACES is a project hosted by the [ASWF](https://aswf.io). See
-[GOVERNANCE.md](GOVERNANCE.md) for details about how the project operates.
+ACES is a project hosted by the [Academy Software Foundation](https://aswf.io). 
+
+See [GOVERNANCE.md](GOVERNANCE.md) for details about how the project operates.
 
 ## Reporting Issues
 
 To report a problem, please open an issue. 
 
-- General issues should be filed in this repository's [issue tracker](https://github.com/ampas/aces/issues). 
-- Issues specific to a particular transform or component should be filed in the issue tracker of the corresponding submodule whenever possible.
-- For sensitive or security-related issues, do not use the public issue tracker. Instead, refer to [SECURITY.md](SECURITY.md) for details on the project's security policy.
+- Whenever possible, issues specific to a particular transform or component
+  should be filed using the issue tracker of its containing repository.
+- General issues can be filed in this repository's [issue
+  tracker](https://github.com/ampas/aces/issues). 
+- For sensitive or security-related issues, do not use the public issue tracker.
+  Instead, refer to [SECURITY.md](SECURITY.md) for details on the project's
+  security policy.
 
 ## License
 
