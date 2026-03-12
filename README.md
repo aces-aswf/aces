@@ -8,85 +8,64 @@ System](https://github.com/AcademySoftwareFoundation/artwork/blob/main/projects/
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-## Introduction
+The **ACES** repository serves as the coordination point for ACES release bundles.  
+It aggregates the modular component repositories that define the ACES rendering transforms, color space definitions, metadata formats, and related functionality.
 
-The Academy Color Encoding System (ACES) started as an initative led by the
-Academy of Motion Picture Arts and Sciences to establish a unified,
-device-independent system for managing color throughout motion picture
-production. It has found usage in motion pictures, television, animation, VFX,
-gaming, immersive media, and related fields. The project’s mission is to enable
-predictable, high-quality color reproduction across diverse workflows and
-technologies, preserving creative intent while supporting interoperability,
-archival needs, and future innovation.
+Tagged releases in this repository represent official ACES bundles, which capture a consistent snapshot of all component repositories at a specific point in time.
 
-## ACES Project Mission
+## Repository Structure
 
-The Academy Color Encoding System (ACES) aims to provide a standardized,
-device-independent, and future-proof system for managing color throughout a
-production pipeline.
+This repository ("**aces**") tracks ACES release bundles and coordinates the modular component repositories listed below:
 
-ACES aims to:
+* [**aces-core**](https://github.com/aces-aswf/aces-core) – Core mathematical models and algorithms used by the ACES rendering transforms.
+* [**aces-amf**](https://github.com/aces-aswf/aces-amf) – The schema and example files for the ACES Metadata File (AMF) format.
+* [**aces-input-and-colorspaces**](https://github.com/aces-aswf/aces-input-and-colorspaces) – Color space definitions and transforms to and from ACES2065–1.
+* [**aces-output**](https://github.com/aces-aswf/aces-output) – Output Transforms configured for common display characteristics and viewing environments.
+* [**aces-look**](https://github.com/aces-aswf/aces-look) – Look Transforms that modify the default appearance of images within an ACES pipeline.
 
-- define and maintain open, standardized encodings and transforms for color
-  management
-- provide a robust framework to support production, post-production,
-  distribution, and archiving
-- ensure compatibility with emerging imaging technologies, including high
-  dynamic range and wide color gamut
-- enable consistent color reproduction from image capture through editing, VFX,
-  grading, mastering, and archiving, regardless of hardware or workflow
-- support long-term archiving of motion picture assets in a format that can be
-  faithfully re-rendered on future display technologies
-- promote wide industry adoption
-- foster a healthy and active community
+> [!NOTE]
+> This repository structure was introduced with version 2 and so only contains history for **ACES 2.0 and newer**. The git history for earlier ACES versions is still preserved and can be found in [`aces-core`](https://github.com/aces-aswf/aces-core/tags) 
+>
+> (`aces-core` is the repository previously named `aces-dev` and was the single repository tracking all ACES components pre-version 2).
 
-## ACES Components
+## `main` vs Tagged Releases
 
-This repository provides a structured and organized way to track and manage
-different versions of ACES, along with their associated modular components,
-which are separated into subrepositories:
+The `main` branch reflects the latest development state of ACES and its submodules. It points to the most recent commits across the modular component repositories, which may include updates that have not yet been packaged into an ACES release.
 
-- **aces-core:** 
-  - contains the maths and algorithms that are at the core of the ACES rendering
-  transforms 
-- **aces-amf:** 
-  - holds the XSD schema and example files for ACES Metadata File (AMF)
-- **aces-input-and-colorspaces:** 
-  - contains color space definitions and the conversions between them, i.e.
-  to/from ACES2065-1
-- **aces-output:** 
-  - transforms with parameters preset to correspond with characteristics of
-  standard or common display configurations
-- **aces-look:** 
-  - contains any transforms that serve to modify the default appearance of
-  images through an ACES pipeline
-
-## Tags and Releases
-
-ACES uses [semantic versioning](https://semver.org/). The version number of ACES
-reflects changes to the ACES core algorithms. 
-
-- **MAJOR.MINOR.PATCH**: Reflects changes to the core ACES algorithms.
-
-A build number denotes the specific collection of modular components (e.g.,
-[Input and Color Space
-Transforms](https://github.com/ampas/aces-input-and-colorspaces), [Output
-Transforms](https://github.com/ampas/aces-output), etc.) in date format.
-
-- **Build Number**: Identifies the specific collection of modular components
-  from the submodules - formatted as `+YYYY.MM.DD`
-
-### Modular Components
-
-The modular components of ACES can be updated at any time by the ACES team or by
-end users. These components do not affect the core functionality of ACES, which
-is why they are not included in the MAJOR.MINOR.PATCH version number.
+Because ACES is composed of multiple modular components, updates can occur between bundled releases. For example, a new camera may contribute an additional Input Transform, or a new Output Transform preset may be introduced for a specific display configuration. These additions may appear in `main` before they are included in a packaged release.
 
 > [!IMPORTANT]
-> This repository only contains history for ACES 2.0 and newer. The git history
-for earlier ACES versions is [preserved in
-`aces-dev`](https://github.com/ampas/aces-core/tags), which was relabeled as
-`aces-core` during a code reorganization associated with the release of ACES 2.  
+> The `main` branch is the bleeding edge. Its contents may change as new transforms or updates are merged.
+
+Tagged releases provide a versioned snapshot of this repository and all of its submodules at a specific point in time. These snapshots correspond to official ACES release bundles.
+
+>[!TIP]
+>**Which should I use?**
+>
+> * Use `main` if you want the latest development changes and are comfortable integrating updates as they appear.
+> * Use a tagged release if you need a stable version suitable for production pipelines or product implementations.
+
+### Versioning
+
+ACES uses [semantic versioning](https://semver.org/) (**MAJOR.MINOR.PATCH**) to indicate updates. 
+
+- **MAJOR** – Significant changes to core ACES algorithms resulting in changest to output pixels.
+- **MINOR** – Non-breaking changes of significance (e.g., new backward-compatible functionality).
+- **PATCH** – Backward-compatible bug fixes.
+
+### Release bundles
+
+Release bundles package the parent repository and all submodules into a ZIP archive representing an ACES distribution.
+
+Each release is identified by a version tag consisting of the ACES semantic version plus a **build date** indicating when the bundle was assembled:
+
+```
+MAJOR.MINOR.PATCH+YYYY.MM.DD
+```
+
+### Release Cadence
+
+Releases are currently scheduled manually. The Technical Steering Committee (TSC) is exploring ways to establish a more predictable release cadence and clearer criteria for what is included in each bundle. The goal is to help implementers better anticipate and plan ACES updates within their own product release cycles.
 
 ## ACES Resources
 
@@ -98,12 +77,9 @@ for earlier ACES versions is [preserved in
 
 ## Contributing
 
-ACES depends on community participation. Developers, manufacturers, and end
-users are encouraged to contribute code, bug fixes, documentation, and other
-technical artifacts.
+ACES depends on community participation. Developers, manufacturers, and end users are encouraged to contribute code, bug fixes, documentation, and other technical artifacts.
 
-All contributors must have a signed Contributor License Agreement (CLA) on file
-to ensure that the project can freely use your contributions. 
+All contributors must have a signed Contributor License Agreement (CLA) on file to ensure that the project can freely use your contributions. 
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md) for more details.
 
@@ -117,13 +93,9 @@ See [GOVERNANCE.md](GOVERNANCE.md) for details about how the project operates.
 
 To report a problem, please open an issue. 
 
-- Whenever possible, issues specific to a particular transform or component
-  should be filed using the issue tracker of its containing repository.
-- General issues can be filed in this repository's [issue
-  tracker](https://github.com/ampas/aces/issues). 
-- For sensitive or security-related issues, do not use the public issue tracker.
-  Instead, refer to [SECURITY.md](SECURITY.md) for details on the project's
-  security policy.
+- Whenever possible, issues specific to a particular transform or component should be filed using the issue tracker of its containing repository.
+- General issues can be filed in this repository's [issue tracker](https://github.com/aces-aswf/aces/issues). 
+- For sensitive or security-related issues, do not use the public issue tracker. Instead, refer to [SECURITY.md](SECURITY.md) for details on the project's security policy.
 
 ## License
 
