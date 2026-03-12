@@ -8,14 +8,14 @@ System](https://github.com/AcademySoftwareFoundation/artwork/blob/main/projects/
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-The **ACES** repository serves as the coordination point for ACES release bundles.  
+The **ACES** repository serves as the coordination point for ACES release packages.  
 It aggregates the modular component repositories that define the ACES rendering transforms, color space definitions, metadata formats, and related functionality.
 
-Tagged releases in this repository represent official ACES bundles, which capture a consistent snapshot of all component repositories at a specific point in time.
+Tagged releases in this repository represent official ACES packages, which capture a consistent snapshot of all component repositories at a specific point in time.
 
 ## Repository Structure
 
-This repository ("**aces**") tracks ACES release bundles and coordinates the modular component repositories listed below:
+This repository ("**aces**") tracks ACES release packages and coordinates the modular component repositories listed below:
 
 * [**aces-core**](https://github.com/aces-aswf/aces-core) – Core mathematical models and algorithms used by the ACES rendering transforms.
 * [**aces-amf**](https://github.com/aces-aswf/aces-amf) – The schema and example files for the ACES Metadata File (AMF) format.
@@ -32,12 +32,12 @@ This repository ("**aces**") tracks ACES release bundles and coordinates the mod
 
 The `main` branch reflects the latest development state of ACES and its submodules. It points to the most recent commits across the modular component repositories, which may include updates that have not yet been packaged into an ACES release.
 
-Because ACES is composed of multiple modular components, updates can occur between bundled releases. For example, a new camera may contribute an additional Input Transform, or a new Output Transform preset may be introduced for a specific display configuration. These additions may appear in `main` before they are included in a packaged release.
+Because ACES is composed of multiple modular components, updates can occur between packaged releases. For example, a new camera may contribute an additional Input Transform, or a new Output Transform preset may be introduced for a specific display configuration. These additions may appear in `main` before they are included in a packaged release.
 
 > [!IMPORTANT]
-> The `main` branch is the bleeding edge. Its contents may change as new transforms or updates are merged.
+> The `main` branch is the "bleeding edge". Its contents may change as new transforms or updates are merged.
 
-Tagged releases provide a versioned snapshot of this repository and all of its submodules at a specific point in time. These snapshots correspond to official ACES release bundles.
+Tagged releases provide a versioned snapshot of this repository and all of its submodules at a specific point in time. These snapshots correspond to official ACES release packages.
 
 >[!TIP]
 >**Which should I use?**
@@ -45,19 +45,22 @@ Tagged releases provide a versioned snapshot of this repository and all of its s
 > * Use `main` if you want the latest development changes and are comfortable integrating updates as they appear.
 > * Use a tagged release if you need a stable version suitable for production pipelines or product implementations.
 
-### Versioning
+### ACES Versioning
 
 ACES uses [semantic versioning](https://semver.org/) (**MAJOR.MINOR.PATCH**) to indicate updates. 
 
-- **MAJOR** – Significant changes to core ACES algorithms resulting in changest to output pixels.
-- **MINOR** – Non-breaking changes of significance (e.g., new backward-compatible functionality).
-- **PATCH** – Backward-compatible bug fixes.
+- **MAJOR** – Significant changes to core ACES algorithms that may result in different output pixel values.
+- **MINOR** – Backward-compatible additions or improvements to the ACES system.
+- **PATCH** – Backward-compatible fixes or clarifications that do not change intended behavior.
 
-### Release bundles
+> [!NOTE]
+> ACES is intentionally modular. Its components are maintained in separate repositories so that new transforms can be added without affecting the core behavior of the system. The addition of new Input, Output, or Look Transforms therefore does **not** mandate a change to the ACES system version number. Changes to the version number reflect when the core ACES algorithms or their behavior are modified.
+ 
+### Release Packages
 
-Release bundles package the parent repository and all submodules into a ZIP archive representing an ACES distribution.
+Release packages bundle the parent repository and all submodules into a ZIP archive representing an ACES distribution.
 
-Each release is identified by a version tag consisting of the ACES semantic version plus a **build date** indicating when the bundle was assembled:
+Each release is identified by a version tag consisting of the ACES semantic version plus a **build date** indicating when the package was assembled:
 
 ```
 MAJOR.MINOR.PATCH+YYYY.MM.DD
@@ -65,7 +68,7 @@ MAJOR.MINOR.PATCH+YYYY.MM.DD
 
 ### Release Cadence
 
-Releases are currently scheduled manually. The Technical Steering Committee (TSC) is exploring ways to establish a more predictable release cadence and clearer criteria for what is included in each bundle. The goal is to help implementers better anticipate and plan ACES updates within their own product release cycles.
+Releases are currently scheduled manually. The Technical Steering Committee (TSC) is exploring ways to establish a more predictable release cadence and clearer criteria for what is included in each package. The goal is to help implementers better anticipate and plan ACES updates within their own product release cycles.
 
 ## ACES Resources
 
