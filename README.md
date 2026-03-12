@@ -8,43 +8,64 @@ System](https://github.com/AcademySoftwareFoundation/artwork/blob/main/projects/
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-## How to use this repository
+The **ACES** repository serves as the coordination point for ACES release bundles.  
+It aggregates the modular component repositories that define the ACES rendering transforms, color space definitions, metadata formats, and related functionality.
 
-This repository provides a structured and organized way to track and manage ACES release bundles and their associated modular components, which are hosted in the following subrepositories:
+Tagged releases in this repository represent official ACES bundles, which capture a consistent snapshot of all component repositories at a specific point in time.
 
-- **aces-core** contains the maths and algorithms that are at the core of the ACES rendering transforms 
-- **aces-amf** holds the XSD schema and example files for ACES Metadata File (AMF)
-- **aces-input-and-colorspaces** ontains color space definitions and the conversions between them, i.e. to/from ACES2065-1
-- **aces-output** transforms with parameters preset to correspond with characteristics of standard or common display configurations
-- **aces-look** contains any transforms that serve to modify the default appearance of images through an ACES pipeline
+## Repository Structure
 
-## Tags and Releases
+This repository ("**aces**") tracks ACES release bundles and coordinates the modular component repositories listed below:
+
+* [**aces-core**](https://github.com/aces-aswf/aces-core) – Core mathematical models and algorithms used by the ACES rendering transforms.
+* [**aces-amf**](https://github.com/aces-aswf/aces-amf) – The schema and example files for the ACES Metadata File (AMF) format.
+* [**aces-input-and-colorspaces**](https://github.com/aces-aswf/aces-input-and-colorspaces) – Color space definitions and transforms to and from ACES2065–1.
+* [**aces-output**](https://github.com/aces-aswf/aces-output) – Output Transforms configured for common display characteristics and viewing environments.
+* [**aces-look**](https://github.com/aces-aswf/aces-look) – Look Transforms that modify the default appearance of images within an ACES pipeline.
+
+> [!NOTE]
+> This repository structure was introduced with version 2 and so only contains history for **ACES 2.0 and newer**. The git history for earlier ACES versions is still preserved and can be found in [`aces-core`](https://github.com/aces-aswf/aces-core/tags) 
+>
+> (`aces-core` is the repository previously named `aces-dev` and was the single repository tracking all ACES components pre-version 2).
+
+## `main` vs Tagged Releases
+
+The `main` branch reflects the latest development state of ACES and its submodules. It points to the most recent commits across the modular component repositories, which may include updates that have not yet been packaged into an ACES release.
+
+Because ACES is composed of multiple modular components, updates can occur between bundled releases. For example, a new camera may contribute an additional Input Transform, or a new Output Transform preset may be introduced for a specific display configuration. These additions may appear in `main` before they are included in a packaged release.
 
 > [!IMPORTANT]
-> The HEAD of the `main` branch always reflects the "latest and greatest" state of all submodules. This may include new transforms or changes that have not yet been "bundled". 
+> The `main` branch is the bleeding edge. Its contents may change as new transforms or updates are merged.
+
+Tagged releases provide a versioned snapshot of this repository and all of its submodules at a specific point in time. These snapshots correspond to official ACES release bundles.
+
+>[!TIP]
+>**Which should I use?**
 >
-> Because individual modular components do not affect the core functionality of ACES, they may be updated between official bundles. For consistency, production pipelines and implementations should reference the latest tagged releases.
+> * Use `main` if you want the latest development changes and are comfortable integrating updates as they appear.
+> * Use a tagged release if you need a stable version suitable for production pipelines or product implementations.
 
-### Versioning Logic
+### Versioning
 
-ACES uses [semantic versioning](https://semver.org/) (**MAJOR.MINOR.PATCH**): 
+ACES uses [semantic versioning](https://semver.org/) (**MAJOR.MINOR.PATCH**) to indicate updates. 
 
-- **MAJOR**: Significant changes to core ACES algorithms resulting in changest to output pixels.
-- **MINOR**: Non-breaking changes of significance (e.g., new backward-compatible functionality).
-- **PATCH**: Backward-compatible bug fixes.
+- **MAJOR** – Significant changes to core ACES algorithms resulting in changest to output pixels.
+- **MINOR** – Non-breaking changes of significance (e.g., new backward-compatible functionality).
+- **PATCH** – Backward-compatible bug fixes.
 
 ### Release bundles
 
-Bundles package the parent repository and all submodules into a ZIP archive. Each bundles is associated with a specific version tag that includes the ACES semantic version plus a **Build Number** (the date the components were collected):
+Release bundles package the parent repository and all submodules into a ZIP archive representing an ACES distribution.
 
-`MAJOR.MINOR.PATCH+YYYY.MM.DD`
+Each release is identified by a version tag consisting of the ACES semantic version plus a **build date** indicating when the bundle was assembled:
 
-> [!IMPORTANT] This repository only contains history for **ACES 2.0 and newer**. The
-> git history for earlier ACES versions is [preserved in `aces-dev`](https://github.com/aces-aswf/aces-core/tags), which was relabeled as `aces-core` during the ACES 2 code reorganization.
+```
+MAJOR.MINOR.PATCH+YYYY.MM.DD
+```
 
 ### Release Cadence
 
-Releases are currently scheduled manually, but the TSC is considering establishing a semi-annual cadence to help implementers better anticipate and schedule ACES updates into their own product release cycles.
+Releases are currently scheduled manually. The Technical Steering Committee (TSC) is exploring ways to establish a more predictable release cadence and clearer criteria for what is included in each bundle. The goal is to help implementers better anticipate and plan ACES updates within their own product release cycles.
 
 ## ACES Resources
 
