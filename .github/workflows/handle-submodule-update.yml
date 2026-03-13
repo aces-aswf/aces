@@ -22,7 +22,12 @@ jobs:
           
           # Update the specific submodule to the SHA sent in the payload
           git update-index --cacheinfo 160000,${{ github.event.client_payload.sha }},${{ github.event.client_payload.submodule }}
-
+      
+      - name: Log Payload
+        run: |
+          echo "Received dispatch from ${{ github.event.client_payload.submodule }}"
+          echo "Payload: ${{ toJson(github.event.client_payload) }}"
+    
       - name: Update Metadata
         id: updater
         run: |
