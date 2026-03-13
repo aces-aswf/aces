@@ -1,0 +1,44 @@
+name: Process Submodule Update
+
+on:
+  repository_dispatch:
+    types: [submodule_update]
+
+jobs:
+  update-parent:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout parent
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
+          token: ${{ secrets.PARENT_REPO_PAT }}
+
+      - name: Update Submodule Hash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Update the specific submodule to the SHA sent in the payload
+          git update-index --cacheinfo 160000,${{ github.event.client_payload.sha }},${{ github.event.client_payload.submodule }}
+
+      - name: Update Metadata
+        id: updater
+        run: |
+          # Pass the entire client-payload from the dispatch to the python script
+          python scripts/update_inventory.py '${{ toJson(github.event.client_payload) }}'
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "Staging new transforms from ${{ github.event.client_payload.submodule }}"
+          title: "New Transforms Found: ${{ github.event.client_payload.submodule }}"
+          body: |
+            ### Automated Transform Inventory Update
+            The following transforms were identified and added to the `next-release-placeholder` block:
+            
+            ${{ steps.updater.outputs.changelog }}
+            
+            _Submodule SHA: ${{ github.event.client_payload.sha }}_
+          branch: "stage-transforms-${{ github.run_id }}"
