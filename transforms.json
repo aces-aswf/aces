@@ -16,8 +16,8 @@
           "previousEquivalentTransformIds": [
             "urn:ampas:aces:transformId:v1.5:ACEScsc.Academy.ACES_to_ACEScc.a1.0.3",
             "ACEScsc.ACES_to_ACEScc.a1.0.3",
-            "ACEScsc.ACEScc_to_ACES.a1.0.1",
-            "ACEScsc.ACEScc_to_ACES.a1.0.0"
+            "ACEScsc.ACES_to_ACEScc.a1.0.1",
+            "ACEScsc.ACES_to_ACEScc.a1.0.0"
           ],
           "inverseTransformId": "urn:ampas:aces:transformId:v2.0:CSC.Academy.ACEScc_to_ACES.a2.v1",
           "transformUrl": "https://raw.githubusercontent.com/ampas/aces-input-and-colorspaces/cc60becf11534f2a40df00a281f47e95412d0599/ACEScc/CSC.Academy.ACES_to_ACEScc.ctl"
@@ -1440,8 +1440,8 @@
           "transformType": "ACEScsc",
           "previousEquivalentTransformIds": [
             "ACEScsc.ACES_to_ACEScc.a1.0.3",
-            "ACEScsc.ACEScc_to_ACES.a1.0.1",
-            "ACEScsc.ACEScc_to_ACES.a1.0.0"
+            "ACEScsc.ACES_to_ACEScc.a1.0.1",
+            "ACEScsc.ACES_to_ACEScc.a1.0.0"
           ],
           "inverseTransformId": "urn:ampas:aces:transformId:v1.5:ACEScsc.Academy.ACEScc_to_ACES.a1.0.3",
           "transformUrl": "https://raw.githubusercontent.com/ampas/aces-core/refs/tags/v1.3.1/transforms/ctl/csc/ACEScc/ACEScsc.Academy.ACES_to_ACEScc.ctl"
@@ -11392,8 +11392,8 @@
           "transformType": "ACEScsc",
           "previousEquivalentTransformIds": [
             "ACEScsc.ACES_to_ACEScc.a1.0.3",
-            "ACEScsc.ACEScc_to_ACES.a1.0.1",
-            "ACEScsc.ACEScc_to_ACES.a1.0.0"
+            "ACEScsc.ACES_to_ACEScc.a1.0.1", 
+            "ACEScsc.ACES_to_ACEScc.a1.0.0"
           ],
           "inverseTransformId": "urn:ampas:aces:transformId:v1.5:ACEScsc.Academy.ACEScc_to_ACES.a1.0.3",
           "transformUrl": "https://raw.githubusercontent.com/ampas/aces-core/refs/tags/v1.3/transforms/ctl/csc/ACEScc/ACEScsc.Academy.ACES_to_ACEScc.ctl"
@@ -21310,8 +21310,8 @@
           "transformType": "ACEScsc",
           "previousEquivalentTransformIds": [
             "ACEScsc.ACES_to_ACEScc.a1.0.3",
-            "ACEScsc.ACEScc_to_ACES.a1.0.1",
-            "ACEScsc.ACEScc_to_ACES.a1.0.0"
+            "ACEScsc.ACES_to_ACEScc.a1.0.1", 
+            "ACEScsc.ACES_to_ACEScc.a1.0.0"
           ],
           "inverseTransformId": "urn:ampas:aces:transformId:v1.5:ACEScsc.Academy.ACEScc_to_ACES.a1.0.3",
           "transformUrl": "https://raw.githubusercontent.com/ampas/aces-core/refs/tags/v1.2/transforms/ctl/csc/ACEScc/ACEScsc.Academy.ACES_to_ACEScc.ctl"
@@ -30928,8 +30928,8 @@
           "userName": "ACES2065-1 to ACEScc",
           "transformType": "ACEScsc",
           "previousEquivalentTransformIds": [
-            "ACEScsc.ACEScc_to_ACES.a1.0.1",
-            "ACEScsc.ACEScc_to_ACES.a1.0.0"
+            "ACEScsc.ACES_to_ACEScc.a1.0.1", 
+            "ACEScsc.ACES_to_ACEScc.a1.0.0"
           ],
           "inverseTransformId": "ACEScsc.ACEScc_to_ACES.a1.0.3",
           "transformUrl": "https://raw.githubusercontent.com/ampas/aces-core/refs/tags/v1.1/transforms/ctl/csc/ACEScc/ACEScsc.ACES_to_ACEScc.ctl"
@@ -38625,8 +38625,8 @@
           "userName": "ACES2065-1 to ACEScc",
           "transformType": "ACEScsc",
           "previousEquivalentTransformIds": [
-            "ACEScsc.ACEScc_to_ACES.a1.0.1",
-            "ACEScsc.ACEScc_to_ACES.a1.0.0"
+            "ACEScsc.ACES_to_ACEScc.a1.0.1", 
+            "ACEScsc.ACES_to_ACEScc.a1.0.0"
           ],
           "inverseTransformId": "ACEScsc.ACEScc_to_ACES.a1.0.3",
           "transformUrl": "https://raw.githubusercontent.com/ampas/aces-core/refs/tags/v1.0.3/transforms/ctl/csc/ACEScc/ACEScsc.ACES_to_ACEScc.ctl"
