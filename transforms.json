@@ -74,7 +74,7 @@
         },
         {
           "transformId": "urn:ampas:aces:transformId:v2.0:CSC.Academy.ACES_to_BMDFilm_WideGamut_Gen5.a2.v1",
-          "userName": "ACES2605-1 to Blackmagic Film Wide Gamut (Gen 5)",
+          "userName": "ACES2065-1 to Blackmagic Film Wide Gamut (Gen 5)",
           "transformType": "CSC",
           "previousEquivalentTransformIds": [
             "urn:ampas:aces:transformId:v1.5:ACEScsc.Academy.ACES_to_BMDFilm_WideGamut_Gen5.a1.v1"
@@ -221,7 +221,7 @@
         },
         {
           "transformId": "urn:ampas:aces:transformId:v2.0:CSC.Blackmagic.BMDFilm_WideGamut_Gen5_to_ACES.a2.v1",
-          "userName": "Blackmagic Film Wide Gamut (Gen 5) to ACES2605-1",
+          "userName": "Blackmagic Film Wide Gamut (Gen 5) to ACES2065-1",
           "transformType": "CSC",
           "previousEquivalentTransformIds": [
             "urn:ampas:aces:transformId:v1.5:ACEScsc.Academy.BMDFilm_WideGamut_Gen5_to_ACES.a1.v1",
@@ -1494,7 +1494,7 @@
         },
         {
           "transformId": "urn:ampas:aces:transformId:v1.5:ACEScsc.Academy.ACES_to_BMDFilm_WideGamut_Gen5.a1.v1",
-          "userName": "ACES2605-1 to Blackmagic Film Wide Gamut (Gen 5)",
+          "userName": "ACES2065-1 to Blackmagic Film Wide Gamut (Gen 5)",
           "transformType": "ACEScsc",
           "previousEquivalentTransformIds": [],
           "inverseTransformId": "urn:ampas:aces:transformId:v1.5:ACEScsc.Academy.BMDFilm_WideGamut_Gen5_to_ACES.a1.v1",
@@ -1666,7 +1666,7 @@
         },
         {
           "transformId": "urn:ampas:aces:transformId:v1.5:ACEScsc.Academy.BMDFilm_WideGamut_Gen5_to_ACES.a1.v1",
-          "userName": "Blackmagic Film Wide Gamut (Gen 5) to ACES2605-1",
+          "userName": "Blackmagic Film Wide Gamut (Gen 5) to ACES2065-1",
           "transformType": "ACEScsc",
           "previousEquivalentTransformIds": [],
           "inverseTransformId": "urn:ampas:aces:transformId:v1.5:ACEScsc.Academy.ACES_to_BMDFilm_WideGamut_Gen5.a1.v1",
