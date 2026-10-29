@@ -194,6 +194,14 @@
           "transformUrl": "https://raw.githubusercontent.com/ampas/aces-input-and-colorspaces/cc60becf11534f2a40df00a281f47e95412d0599/apple/CSC.Apple.AppleLog_BT2020_to_ACES.ctl"
         },
         {
+          "transformId": "urn:ampas:aces:transformId:v2.0:CSC.Arri.ACES_to_LogC3.a2.v1",
+          "userName": "ACES2065-1 to ARRI LogC3",
+          "transformType": "CSC",
+          "previousEquivalentTransformIds": [],
+          "inverseTransformId": "urn:ampas:aces:transformId:v2.0:CSC.Arri.LogC3_to_ACES.a2.v1",
+          "transformUrl": []
+        },
+        {
           "transformId": "urn:ampas:aces:transformId:v2.0:CSC.Arri.ACES_to_LogC4.a2.v1",
           "userName": "ACES2065-1 to ARRI LogC4",
           "transformType": "CSC",
@@ -206,7 +214,7 @@
           "userName": "ARRI LogC3 to ACES2065-1",
           "transformType": "CSC",
           "previousEquivalentTransformIds": [],
-          "inverseTransformId": "",
+          "inverseTransformId": "urn:ampas:aces:transformId:v2.0:CSC.Arri.ACES_to_LogC3.a2.v1",
           "transformUrl": "https://raw.githubusercontent.com/ampas/aces-input-and-colorspaces/cc60becf11534f2a40df00a281f47e95412d0599/arri/CSC.Arri.LogCv3_to_ACES.ctl"
         },
         {
