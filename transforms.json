@@ -420,7 +420,7 @@
         },
         {
           "transformId": "urn:ampas:aces:transformId:v2.0:CSC.Sony.SLog2_SGamut_Daylight_10i_to_ACES.a2.v1",
-          "userName": "Sony S-Log2 S-Gamut2 (Daylight) 10 bits to ACES2065-1",
+          "userName": "Sony S-Log2 S-Gamut (Daylight) 10 bits to ACES2065-1",
           "transformType": "CSC",
           "previousEquivalentTransformIds": [],
           "inverseTransformId": "",
